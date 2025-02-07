@@ -1,7 +1,7 @@
 <h2>第一次購物</h2>
 <img src="./icon/0413.jpg" alt="">
 <h2>會員登入</h2>
-
+<!-- <?=serialize([1,2,3,4,5])?> -->
 <table class="all">
     <tr>
         <td class="tt ct">帳號</td>
@@ -9,22 +9,21 @@
     </tr>
     <tr>
         <td class="tt ct">密碼</td>
-        <td class="pp"><input type="text" name="password" name="pw" id="pw"></td>
+        <td class="pp"><input type="password" name="pw" id="pw"></td>
     </tr>
     <tr>
         <td class="tt ct">驗證碼</td>
         <td class="pp">
             <?php
-            $a=rand(10,99);
-            $b=rand(10,99);
-            $_SESSION['ans']=$a+$b;
-            echo $a . " + " . $b . " = ";
+                $a=rand(10,99);
+                $b=rand(10,99);
+                $_SESSION['ans']=$a+$b;
+                echo $a . " + " . $b . " = ";
             ?>
             <input type="text" name="ans" id="ans">
         </td>
     </tr>
 </table>
-
 <div class="ct"><button onclick="login()">確認</button></div>
 
 <script>
@@ -38,7 +37,7 @@ function login() {
         if (parseInt(res)) {
             $.get("api/chk_pw.php", {
                 acc: $("#acc").val(),
-                pw: $("#pw").val()
+                pw: $("#pw").val(),
                 table: "Mem"
             }, function(res) {
                 //console.log(res)
