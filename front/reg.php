@@ -75,7 +75,7 @@ function reg() {
                 alert("帳號已被使用");
             } else {
                 $.post("api/reg.php", data, function(res) {
-                    console.log(res);
+                    // console.log(res);
 
                     alert("註冊完成，歡迎加入");
                 })
