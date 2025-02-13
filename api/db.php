@@ -68,7 +68,7 @@ function del($array){
         $sql .= " where `id`='$array'";
     }
 
-    return $this->exec($sql);
+    return $this->pdo->exec($sql);
 }
 function count(...$arg){
     $sql="select count(*) from $this->table ";
