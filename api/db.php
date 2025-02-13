@@ -123,5 +123,5 @@ function dd($array){
 
 $Mem=new DB("members");
 $Admin=new DB ("admins");
-
+$Bot=new DB("bottom");
 ?>
