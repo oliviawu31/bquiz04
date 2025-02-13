@@ -17,6 +17,7 @@ function all(...$arg){
     $sql="select * from $this->table ";
     if(!empty($arg[0]) && is_array($arg[0])){
         $tmp=$this->arrayToSQL($arg[0]);
+        //dd($tmp);
         $sql .=" where ".join(" && ",$tmp);
     }else if(isset($arg[0]) && is_string($arg[0])){
         $sql .=$arg[0];
@@ -88,6 +89,7 @@ function count(...$arg){
 
 function arrayToSQL($array){
     $tmp=[];
+    //dd($array);
     foreach($array as $key=>$value){
         $tmp[]="`$key`='$value'";
     }
@@ -99,6 +101,7 @@ function fetch_one($sql){
     return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 }
 function fetch_all($sql){
+   // echo $sql;
     return $this->pdo->query($sql)->fetchALL(PDO::FETCH_ASSOC);
 }
 
