@@ -124,7 +124,6 @@ function editType(id, dom) {
             <button onclick="del('Item',<?=$row['id'];?>)">刪除</button>
             <button onclick="sh(<?=$row['id'];?>,1,this)">上架</button>
             <button onclick="sh(<?=$row['id'];?>,2,this)">下架</button>
-
         </td>
     </tr>
     <?php
