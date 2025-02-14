@@ -1,6 +1,7 @@
 <?php include_once "./api/db.php";
 $user=$Admin->find(['acc'=>$_SESSION['Admin']]);
 $pr=unserialize($user['pr']);
+
 ?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,6 +27,7 @@ $pr=unserialize($user['pr']);
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
+                <a href="?do=admin">管理權限設置</a>
                 <?php
               echo (in_array(1,$pr))?"<a href='?do=th'>商品分類與管理</a>":'';
               echo (in_array(2,$pr))?"<a href='?do=order'>訂單管理</a>":'';
@@ -50,7 +52,7 @@ $pr=unserialize($user['pr']);
         ?>
         </div>
         <div id="bottom" style="line-height:70px; color:#FFF; background:url(icon/bot.png);" class="ct">
-            <?=$Bot->find(1)['bottom'];?> </div>
+            <?=$Bot->find(1)['bottom'];?></div>
     </div>
 
 </body>
