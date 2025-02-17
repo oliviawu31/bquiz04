@@ -55,7 +55,11 @@ foreach($rows as $row):
     </div>
     <div>
         <div class='tt ct'><?=$row['name'];?></div>
-        <div class='pp'>價格:<?=$row['price'];?></div>
+        <div class='pp'>價格:<?=$row['price'];?>
+            <a href="?do=buycatr&id=<?=$row['id'];?>&qt=1">
+                <img src="./icon/0402.jpg" style="float:right">
+            </a>
+        </div>
         <div class='pp'>規格:<?=$row['spec'];?></div>
         <div class='pp'>簡介:<?=mb_substr($row['intro'],0,20);?>...</div>
     </div>
