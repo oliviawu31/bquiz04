@@ -9,8 +9,9 @@ if($typeId==0){
         $nav=$type['name'];
     }else{
         $big=$Type->find($type['big_id']);
-        $nav=$big['name'] . " > " . $type['name'];   
+        $nav=$big['name'] ." > ". $type['name'];
     }
+    
 }
 ?>
 <h2><?=$nav;?></h2>
@@ -34,7 +35,7 @@ if($typeId==0){
     width: 60%;
 }
 </style>
-<?php
+<?php 
 if($typeId==0){
     $rows=$Item->all();
 }else if($type['big_id']==0){
@@ -46,7 +47,6 @@ if($typeId==0){
 <?php
 foreach($rows as $row):
 ?>
-
 <div class='item'>
     <div class='pp'>
         <a href="?do=detail&id=<?=$row['id'];?>">
@@ -54,9 +54,13 @@ foreach($rows as $row):
         </a>
     </div>
     <div>
-        <div class='tt ct'><?=$row['name'];?></div>
-        <div class='pp'>價格:<?=$row['price'];?>
-            <a href="?do=buycatr&id=<?=$row['id'];?>&qt=1">
+        <div class='tt ct'>
+            <?=$row['name'];?>
+
+        </div>
+        <div class='pp'>
+            價錢:<?=$row['price'];?>
+            <a href="?do=buycart&id=<?=$row['id'];?>&qt=1">
                 <img src="./icon/0402.jpg" style="float:right">
             </a>
         </div>
