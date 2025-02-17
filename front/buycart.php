@@ -57,7 +57,7 @@ function delCart(id) {
     $.post("./api/delCart.php", {
         id
     }, function() {
-        location.reload();
+        location.href = '?do=buycart';
     })
 }
 </script>
