@@ -55,6 +55,7 @@
 
         <div id="left" class="ct">
             <div style="min-height:400px;">
+                <a href="?type=0">全部商品</a>
                 <?php 
             $bigs=$Type->all(['big_id'=>0]);
             foreach($bigs as $big){
