@@ -14,9 +14,8 @@ if(!isset($_SESSION['Mem'])){
 ?>
 <h2 class="ct"><?=$_SESSION['Mem'];?>的購物車</h2>
 
-<table>
-    <tr class="all">
-        <td class="tt ct">
+<table class="all">
+    <tr class="tt ct">
         <td>編號</td>
         <td>商品名稱</td>
         <td>數量</td>
